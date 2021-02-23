@@ -1,0 +1,32 @@
+.container_one, .container_two, .container_three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  display: grid;
+  grid-template-rows: 1fr 12% 12% 12% 12% 12% 1fr;
+  /* grid-template-columns: 1fr 12% 12% 12% 12% 12% 1fr; */
+}
+
+.top, .mid, .btm {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  color: red;
+  border: 5px solid red;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
