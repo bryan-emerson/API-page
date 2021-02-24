@@ -1,10 +1,14 @@
 console.log("sup fam")
 
-
-
-let divs = document.getElementsByTagName('div');
-console.log(divs.length)
-
-let squares = document.querySelectorAll('div');
+let squares = document.querySelectorAll('.square');
 console.log(squares)
 
+//query select all squares
+//add event lisener to squares
+//on click event change modal opacity and populate with applicable info from api
+
+
+//fetch to url
+//then
+//then > data handler
+//square info = info from from api data.stuff.stuff
