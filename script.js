@@ -1,20 +1,8 @@
 console.log("sup fam")
 let squares = document.querySelectorAll('.square');
-console.log(squares)
+console.log(squares[0].style.backgroundImage)
 let modal = document.querySelector('.modal');
-console.log(modal.style.opacity);
 let modalClose = document.querySelector('.close');
-console.log(modalClose);
-// let mids = document.querySelectorAll('.mid');
-// console.log(mids);
-//query select all squares
-//add event lisener to squares
-//on click event change modal opacity and populate with applicable info from api
-// for (let i = 0; i < mids.length; i ++) {
-//   mids[i].onclick = function() {
-//     modal.style.opacity = 1;
-//   }
-// }
 
 for (let i = 0; i < squares.length; i++) {
   squares[i].addEventListener('click', function () {
@@ -24,41 +12,32 @@ for (let i = 0; i < squares.length; i++) {
   })
 }
 
-
-
 modalClose.addEventListener('click', function () {
   modal.style.display = 'none';
 })
 
-
-// squares.onclick = function() {
-//   modal.style.opacity = 1;
-// }
-// modalClose.onclick = function() {
-//   modal.style.opacity = 0;
-// }
-//fetch to url
-//then
-//then > data handler
-//square info = info from from api data.stuff.stuff
-
-
-//iterate onload for each square
-
-let url = 'https://picsum.photos/200';
+//iterate onload, do for each square
+let url = 'https://picsum.photos/v2/list?limit=15';
 fetch(url)
-  .then(response=>{
-    console.log(response)
-    return response.url;
-  })
-  .then (data=> handleResponse(data))
+  .then(response => response.json())
+  // .then(response=>{
+  //   console.log(response)
+  //   return response.url;
+  // })
+  .then(data => handleResponse(data))
 
 let handleResponse = function (data) {
-  //create node
+  for (let j = 0; j < data.length; j++) {
+    //console.log(squares[j]);
+    squares[j].style.backgroundImage = data[j].url;
+  }
+  //create node for modal?
   //set node to desired stuff
-  console.log(data)
+  console.log(data[0].url)
 }
 
-// let requestPromise = fetch(url)
 
-// requestPromise.then(handleResponse)
+
+
+
+

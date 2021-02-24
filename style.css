@@ -75,7 +75,7 @@ footer {
   /* top: 0; */
   margin: 0 auto;
   width: 50%; /*full width*/
-  height: 40%; /*full height*/
+  height: 65%; /*full height*/
   background-color: rgb(0, 0, 0); /* fallback color */
   background-color: rgba (0, 0, 0, 0.4); /* black w opacity*/
   /* display: flex;
@@ -87,8 +87,8 @@ footer {
 .modTop {
   display: none;
   width: 100%;
-  height: 55%;
-  border: 5px solid red;
+  height: 77%;
+  /* border: 5px solid red; */
   color: white;
   display: flex;
   align-items: center;
@@ -99,8 +99,8 @@ footer {
 .modBtm {
   display: none;
   width: 100%;
-  height: 40%;
-  border: 5px solid red;
+  height: 20%;
+  /* border: 5px solid red; */
   color: white;
   display: flex;
   align-items: center;
