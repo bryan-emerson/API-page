@@ -1,5 +1,6 @@
 console.log("sup fam")
 let squares = document.querySelectorAll('.square');
+console.log(squares[0].style.backgroundImage);
 console.log(squares[0].style.backgroundImage)
 let modal = document.querySelector('.modal');
 let modalClose = document.querySelector('.close');
@@ -27,13 +28,18 @@ fetch(url)
   .then(data => handleResponse(data))
 
 let handleResponse = function (data) {
+  console.log(data)
   for (let j = 0; j < data.length; j++) {
-    //console.log(squares[j]);
-    squares[j].style.backgroundImage = data[j].url;
-  }
+    console.log(data[j].url);
+    //console.log(squares[j].style)
+    let url = data[j].download_url.toString()
+    //console.log(typeof url)
+    squares[j].style.background = `url(${url})`
+    // squares[j].style.background =
+    }
   //create node for modal?
   //set node to desired stuff
-  console.log(data[0].url)
+  //console.log(data[0].url)
 }
 
 
