@@ -46,7 +46,7 @@ let handleResponse = function (data) {
       console.log(this.style)
       modal.style.display = 'block';
       modTop.style.background = this.style.background
-      modTop.style.backgroundPosition = 'center'
+      modTop.style.backgroundSize = 'cover'
       modBtm.innerText = "download me" + "   " + url
       //call func here to populate
     })
