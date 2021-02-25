@@ -24,6 +24,7 @@ modalClose.addEventListener('click', function () {
 
 //iterate onload, do for each square
 let url = 'https://picsum.photos/v2/list?limit=15';
+//let url = 'https://picsum.photos/800/400/v2/list?limit=15'
 fetch(url)
   .then(response => response.json())
   .then(data => handleResponse(data))
@@ -46,7 +47,7 @@ let handleResponse = function (data) {
       modal.style.display = 'block';
       modTop.style.background = this.style.background
       modTop.style.backgroundPosition = 'center'
-      modBtm.innerText = url
+      modBtm.innerText = "download me" + "   " + url
       //call func here to populate
     })
   }
