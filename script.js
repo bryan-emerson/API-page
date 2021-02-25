@@ -45,6 +45,7 @@ let handleResponse = function (data) {
       console.log(this.style)
       modal.style.display = 'block';
       modTop.style.background = this.style.background
+      modTop.style.backgroundPosition = 'center'
       modBtm.innerText = url
       //call func here to populate
     })
