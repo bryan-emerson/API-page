@@ -37,6 +37,7 @@ let handleResponse = function (data) {
     let url = data[j].download_url.toString()
     //console.log(typeof url)
     squares[j].style.background = `url(${url})`
+    console.log(squares[j].style)
     }
   //create node for modal?
   //set node to desired stuff
