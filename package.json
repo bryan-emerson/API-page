@@ -9,6 +9,6 @@
     "node": "^16.3.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node script.js"
   }
 }
